@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+html, body{width:100%}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small" >WELCOME</a>
+    <a href="{{ url_for('climate')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLIMATE CHANGE</a>
+    <a href="#soil" class="w3-bar-item w3-button w3-padding-large">SOIL</a>
+    <a href="{{ url_for('crop_recommend')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RECOMMENDER</a>
+    <a href="{{ url_for('contact')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+</div>
+</div>
+
+<!-- Page content -->
+
+<div class="w3-container w3-content w3-padding-64 w3-wide" width="1000px">
+
+    <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" id="contact">
+    <h2 class="w3-wide w3-center">WELCOME <i class="fa fa-binoculars w3-hover-opacity"></i></h2>
+    <i class="fa fa- w3-hover-opacity"></i>
+        <h3 class="w3-wide w3-padding-32">Intro <i class="fa fa-coffee w3-hover-opacity"></i></h3>
+        <p class="w3-opacity"><i>Earth’s temperature raises can be reflected in melting glaciers, higher precipitation and more erratic and extreme weather events as well as changes to seasonal patterns. Combining the acceleration of these events with population growth and widening of income inequality (especially in developing countries), we can predict a high risk to food production and supply security. 
+          Today, nearly half the population of developing countries (2.5 billion people) depend on agriculture as a means of income. 
+          <p class="w3-opacity"><i></i>
+          The world’s food supply is heavily reliant on weather predictability and is therefore sensitive to climate change. As climate zones move or grow, so do optimal conditions to grow certain types of crops. Often, farmers (especially in developing countries) don’t have access the appropriate information and are unable to adapt quickly enough. This might leave them with unyielding crops or subpar production.
+          <p class="w3-opacity"><i>
+          Our Solution takes existing soil conditions inclusive of Ph, Nitrogen, Potassium, and Phosphorus and combines it with climate data today and into the future to recommend crops with high likelihood of success and financial returns.
+          </p>
+        <h3 class="w3-wide w3-padding-32">Intended Audience <i class="w3-hover-opacity"></i></h3>
+        <p class="w3-opacity"><i>We aim to use these data visualizations and recommender tool to assist small and medium seised farmers that are in the midst of setting short and long term crop plans in Costa Rica. 
+          It is out hope that these farmers have access to appropriate agricultural markets and consultancy for crop management.
+          </p>
+        <h3 class="w3-wide w3-padding-32">Data Sources and Description <i class="fa fa-database w3-hover-opacity"></i></h3>
+        <h5 class="w3-wide w3-padding-">Climate Change<i class="w3-hover-opacity"></i></h5>
+        <p class="w3-opacity"> Province level climate change data comes from the Coupled Model Intercomparison Project (CMIP). 
+          Their purpose is to better understand past, present and future climate changes arising from natural, 
+          unforced variability or in response to changes in radiative forcing in a multi-model context. 
+          This understanding includes assessments of model performance during the historical period and quantifications of the 
+          causes of the spread in future projections. The CMIP-6 is produced by the World Climate Research Program within the NOAA.<i>
+        <p class="w3-opacity"><i> Variables at use include time series of min/median/max rainfall, min/median/max temperature, 
+          as well as three climate changed modals (low impact / medium impact / agressive impact)</i>
+
+        <h5 class="w3-wide w3-padding-">Local Climate<i class="w3-hover-opacity"></i></h5>
+        <p class="w3-opacity"><i>We've worked with local Costa Rican entities to gather precise locations of over 120 specific 
+          meteorological stations spread out around the country to better pinpoint local-level climate change effects from province level forecasts (CMIP-6).
+          <h5 class="w3-wide w3-padding-">Soil<i class="w3-hover-opacity"></i></h5> 
+        <p class="w3-opacity"><i> Soil data comes from the International Soil Reference and Information Centre, who has a mission to serve the international community 
+          as custodian of global soil information. They strive to increase awareness and understanding of soils in major global issues.</p>
+        <p class="w3-opacity"><i>This data includes many soil attributes used in our model including exact levels and content of potassium, nitrogen, and Phosphorus. 
+          Soil composand has been visualized at the 250sq meter level.</i>
+          <h5 class="w3-wide w3-padding-">Crops<i class="w3-hover-opacity"></i></h5> 
+          <p class="w3-opacity"><i> Crop data has been gathered and augmented from various sources and databases including Food and Agriculture Organization of the United Nations, 
+            the United States Department of Agriculture, The Instituto Nazionale di Statistica, 
+            as well as various Global Agriculture Spot pricing sources such as Tridge.com </p>
+          <h3 class="w3-wide w3-padding-32">Leadership Team <i class="w3-hover-opacity"></i></h3>
+        <p class="w3-opacity"><i>Hank Apfel, Terry Ninvoraskul, Demian Rivera</p>      
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
