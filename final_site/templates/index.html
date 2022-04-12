@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Lato", sans-serif; background:#222020; color:#EBEAE6}}
 html, body{width:100%}
 </style>
 <body>
@@ -18,7 +18,6 @@ html, body{width:100%}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="{{ url_for('home')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small" >WELCOME</a>
     <a href="{{ url_for('climate')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLIMATE CHANGE</a>
-    <a href="#soil" class="w3-bar-item w3-button w3-padding-large">SOIL</a>
     <a href="{{ url_for('crop_recommend')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RECOMMENDER</a>
     <a href="{{ url_for('contact')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
 </div>
@@ -30,9 +29,9 @@ html, body{width:100%}
 
     <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" id="contact">
-    <h2 class="w3-wide w3-center">WELCOME <i class="fa fa-binoculars w3-hover-opacity"></i></h2>
+    <h1 class="w3-wide w3-center" style="color:orange;">CropPick <img src="{{url_for('static',filename = 'mango.png')}}" width="60" height="60"></i></h1>
     <i class="fa fa- w3-hover-opacity"></i>
-        <h3 class="w3-wide w3-padding-32">Intro <i class="fa fa-coffee w3-hover-opacity"></i></h3>
+        <h3 class="w3-wide">Intro <i class="fa fa-coffee w3-hover-opacity"></i></h3>
         <p class="w3-opacity"><i>Earth’s temperature raises can be reflected in melting glaciers, higher precipitation and more erratic and extreme weather events as well as changes to seasonal patterns. Combining the acceleration of these events with population growth and widening of income inequality (especially in developing countries), we can predict a high risk to food production and supply security. 
           Today, nearly half the population of developing countries (2.5 billion people) depend on agriculture as a means of income. 
           <p class="w3-opacity"><i></i>

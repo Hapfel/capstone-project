@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Lato", sans-serif; background:#222020; color:#EBEAE6}}
 html, body{width:100%}
 </style>
 <body>
@@ -17,7 +17,6 @@ html, body{width:100%}
   <div class="w3-bar w3-black w3-card">
     <a href="{{ url_for('home')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small" >WELCOME</a>
     <a href="{{ url_for('climate')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLIMATE CHANGE</a>
-    <a href="#soil" class="w3-bar-item w3-button w3-padding-large">SOIL</a>
     <a href="{{ url_for('crop_recommend')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RECOMMENDER</a>
     <a href="{{ url_for('contact')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
   </div>
@@ -29,7 +28,7 @@ html, body{width:100%}
 
     <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <h2 class="w3-wide w3-center">CONTACT <img src="{{url_for('static',filename = 'mango.png')}}" width="60" height="60"></h2>
     <p class="w3-opacity w3-center"><i>Feedback? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
