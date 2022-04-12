@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;
+      color: white;
+      background:#222020}
+html, body{width:100%}
+
+#top3 , #user, #crop {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto
+}
+
+#top3 , #user, #crop {
+  width: 50%;
+  margin: auto
+}
+
+#top3 td, #top3 th , #user td, #user th, #crop td, #crop th{
+  border: 1px solid #080808;
+  padding: 8px;
+  color: ;
+  background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  text-align:  center;
+}
+
+#top3 tr:nth-child(even){background-color: #424242;}
+#user tr:nth-child(even){background-color: #424242;}
+#crop tr:nth-child(even){background-color: #424242;}
+
+#top3 tr:hover {background-color: purple;}
+#user tr:hover {background-color: purple;}
+#crop tr:hover {background-color: purple;}
+
+#top3 th, #user th, #crop th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: orange;
+  color: white;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+</style>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small" >WELCOME</a>
+    <a href="{{ url_for('climate')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLIMATE CHANGE</a>
+    <a href="{{ url_for('crop_recommend')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RECOMMENDER</a>
+    <a href="{{ url_for('contact')}}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page content -->
+  <div class="w3-container w3-content w3-padding-64" id="contact">
+  <h1 class="w3-wide" style="color:orange">CropPick <i class="w3-hover-opacity"> <img src="{{url_for('static',filename = 'mango.png')}}" width="60" height="60"> </i></h1>
+    <h2 class="w3-wide">Recommendations</h2>
+    <br>
+
+<h1 class="text-center"><b>You should grow <i>{{ T0A }} </i>in your farm</b></h1>
+  <table id="top3">
+    <thead>
+      <tr>
+        <th style="color:black">CropPick Probability</th>
+        <th style="color:black">Model Probability</th>
+        <th style="color:black">Nitrogen</th>
+        <th style="color:black">Phosporus</th>
+        <th style="color:black">Potassium</th>
+        <th style="color:black">Temp (C)</th>
+        <th style="color:black">Humidity</th>
+        <th style="color:black">Ph Value</th>
+        <th style="color:black">Rainfall (cm)</thstyle="color:black">
+        <th style="color:black">Production per acre (kg)</th>
+        <th style="color:black">Revenue per acre ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ T0A }}</td>
+        <td>{{ T0B }}</</td>
+        <td>{{ T0C }}</td>
+        <td>{{ T0D }}</</td>
+        <td>{{ T0E }}</td>
+        <td>{{ T0F }}</</td>
+        <td>{{ T0G }}</td>
+        <td>{{ T0H }}</</td>
+        <td>{{ T0I }}</td>
+        <td>{{ T0J }}</</td>
+        <td>${{ T0K }}</td>
+      </tr>
+      <tr>
+        <td>{{ T1A }}</</td>
+        <td>{{ T1B }}</</td>
+        <td>{{ T1C }}</td>
+        <td>{{ T1D }}</</td>
+        <td>{{ T1E }}</td>
+        <td>{{ T1F }}</</td>
+        <td>{{ T1G }}</</td>
+        <td>{{ T1H }}</</td>
+        <td>{{ T1I }}</td>
+        <td>{{ T1J }}</</td>
+        <td>${{ T1K }}</td>
+      </tr>
+      <tr>
+        <td>{{ T2A }}</</td>
+        <td>{{ T2B }}</</td>
+        <td>{{ T2C }}</td>
+        <td>{{ T2D }}</</td>
+        <td>{{ T2E }}</td>
+        <td>{{ T2F }}</</td>
+        <td>{{ T2G }}</</td>
+        <td>{{ T2H }}</</td>
+        <td>{{ T2I }}</td>
+        <td>{{ T2J }}</</td>
+        <td>${{ T2K }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2 class="text-center"><b>Based on the following parameters:</b></h1> 
+  <table id="user">
+    <thead>
+      <tr>
+        <th style="color:black">Nitrogen</th>
+        <th style="color:black">Phosporus</th>
+        <th style="color:black">Potassium</th>
+        <th style="color:black">Temp (C)</th>
+        <th style="color:black">Humidity</th>
+        <th style="color:black">Ph Value</th>
+        <th style="color:black">Rainfall (cm)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ U0A }}</td>
+        <td>{{ U0B }}</</td>
+        <td>{{ U0C }}</td>
+        <td>{{ U0D }}</</td>
+        <td>{{ U0E }}</td>
+        <td>{{ U0F }}</</td>
+        <td>{{ U0G }}</</td>        
+      </tr>
+    </tbody>
+  </table>  
+</div>
